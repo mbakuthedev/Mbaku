@@ -1,0 +1,24 @@
+﻿@model TblPerson
+@model TblGender
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-controller="Person" asp-action="Update" asp-antiforgery="true">
+    <input type="hidden" asp-for="Id" />
+    <dl>
+        <dt>Name</dt>
+        <dd><input type="text" asp-for="Name" /></dd>
+    </dl>
+    <dl>
+        <dt>Email</dt>
+        <dd><input type="text" asp-for="Email" /></dd>
+    </dl>
+    <dl>
+        <dt>Gender</dt>
+        <dd><input type="text" asp-for="Gender" /></dd>
+    </dl>
+
+    <button type="submit">Save</button>
+    <a class="btn-dark pointer-event" asp-controller="Person" asp-action="Index">Back</a>
+</form>

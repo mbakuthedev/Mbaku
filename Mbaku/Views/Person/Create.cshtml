@@ -1,0 +1,24 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.ValidationSummary()
+<form asp-action="Create" asp-controller="Person" asp-antiforgery="true">
+    <dl>
+        <dt><label for="Id">Id</label></dt>
+        <dd><input type="text" /></dd>
+    </dl>
+    <dl>
+        <dt><label for="Name">Name</label></dt>
+        <dd><input type="text" /></dd>
+    </dl>
+    <dl>
+        <dt> <label for="Email">Email</label></dt>
+        <dd>
+            <input type="email" />
+        </dd>
+    </dl>
+   <input type="submit" value="Create" class="btn-outline-primary" />
+    
+    
+</form>

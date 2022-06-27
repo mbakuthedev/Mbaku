@@ -1,0 +1,37 @@
+﻿@model ICollection<TblPerson>
+
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <a class="badge badge-dark" asp-controller="Person" asp-action="Create">Create Record</a>
+</div>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="auto">Email</th>
+
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td scope="col">@item.Id</td>
+                    <td scope="col">@item.Name</td>
+                    <td scope="col">@item.Email</td>
+                    <td scope="col">@item.Gender.Gender</td>
+                    <td> <a class="badge badge-dark" asp-controller="Person" asp-action="GetPerson" asp-route-Id="@item.Id">Edit</a></td>
+                    <td><a class="badge badge-dark" asp-controller="Person" asp-action="Delete" asp-route-Id="@item.Id">Delete</a></td>
+
+                </tr>
+            </tbody>
+        }
+
+
+    </table>
+</div>

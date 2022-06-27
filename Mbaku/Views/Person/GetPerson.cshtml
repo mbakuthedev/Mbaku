@@ -1,0 +1,27 @@
+﻿@model TblPerson
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<dl>
+    <dt>ID</dt>
+    <dd>@Model.Id</dd>
+</dl>
+<dl>
+    <dt>Name</dt>
+    <dd>@Model.Name</dd>
+
+</dl>
+<dl>
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+</dl>
+<dl>
+    <dt>Gender</dt>
+    <dd>@Model.Gender.Gender</dd>
+</dl>
+<a class="badge badge-dark" asp-controller="Person" asp-action="Update" asp-route-Id="@Model.Id">Edit</a>
+<a class="bg-danger" asp-controller="Person" asp-action="Index">Back</a>
+
+
