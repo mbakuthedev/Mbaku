@@ -1,0 +1,23 @@
+﻿@model Mbaku.Viewmodels.RegisterViewModel
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <form asp-controller="Account" asp-action="Register">
+        <div>
+            <label asp-for="EmailAddress"></label>
+            <input asp-for="EmailAddress" />
+            <span asp-validation-for="EmailAddress" style="color:red"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password" style="color:red"></span>
+        </div>
+        <div>
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+        </div>
+    </form>
+</div>

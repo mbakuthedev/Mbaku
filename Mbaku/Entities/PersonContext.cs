@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Mbaku.Models;
 #nullable disable
 
 namespace Mbaku.Entities
 {
-    public partial class PersonContext : DbContext
+    public partial class PersonContext :DbContext
     {
         public PersonContext()
         {
