@@ -1,1 +1,1 @@
-Updated with an Asp.net Identity Login/ Registeration Panel(with Bugs, fixes will be made soon)
+An asp.net core crud system with a login and registration panel
